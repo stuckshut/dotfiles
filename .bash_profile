@@ -45,7 +45,7 @@ source "$HOME/workspace/google-cloud-sdk/path.bash.inc"
 source "$HOME/workspace/google-cloud-sdk/completion.bash.inc"
 
 # Go Version Manager
-export GVM_ROOT=/Users/ericanders/.gvm
+export GVM_ROOT="$HOME/.gvm"
 
 # Maven and ANT memory options
 export MAVEN_OPTS="-Xmx4096m -Xss1024m -XX:MaxPermSize=128m"
