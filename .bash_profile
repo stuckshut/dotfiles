@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Path to here
+export PROFILE="$HOME/.bash_profile"
+
 # Path to the bash it configuration
 export BASH_IT="$HOME/.bash_it"
 
@@ -46,6 +49,7 @@ source "$HOME/workspace/google-cloud-sdk/completion.bash.inc"
 
 # Go Version Manager
 export GVM_ROOT="$HOME/.gvm"
+export PATH="$PATH:$HOME/.gvm/bin"
 
 # Maven and ANT memory options
 export MAVEN_OPTS="-Xmx4096m -Xss1024m -XX:MaxPermSize=128m"
@@ -60,11 +64,16 @@ eval $(thefuck --alias)
 # vi mode!
 # set -o vi
 
-# Show/Hide File aliases
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
 # Virtualenv Wrapper setup
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/workspace
 source /usr/local/bin/virtualenvwrapper.sh
+
+# NVM stuff
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# WINE & STEAM
+alias steam='WINEARCH=win32 WINEPREFIX=~/.wine32 wine ~/.wine32/drive_c/Program\ Files/Steam/Steam.exe'
+
+alias pipclean="pip list | cut -d' ' -f1 | xargs pip uninstall -y"

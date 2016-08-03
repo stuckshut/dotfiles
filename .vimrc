@@ -225,7 +225,7 @@ set wrap "Wrap lines
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
-
+nnoremap q <c-v>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
@@ -451,3 +451,7 @@ endfunction
 
 " Set to use clipboard when copying
 set clipboard=unnamedplus,unnamed,autoselect
+
+" Aliases
+command Tab2 set tabstop=2 shiftwidth=2 expandtab
+command Tab4 set tabstop=4 shiftwidth=4 expandtab
