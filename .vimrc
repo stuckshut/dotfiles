@@ -65,10 +65,6 @@ nmap <leader>w :w!<cr>
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
 
-" Enable pathogen
-execute pathogen#infect()
-" this is a plugin loader, I promise
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -455,3 +451,4 @@ set clipboard=unnamedplus,unnamed,autoselect
 " Aliases
 command Tab2 set tabstop=2 shiftwidth=2 expandtab
 command Tab4 set tabstop=4 shiftwidth=4 expandtab
+
